@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            targetNamespace="http://app.soadev.com/model/domain"
+            xmlns="http://app.soadev.com/model/domain" xmlns:sdoJava="commonj.sdo/java"
+            sdoJava:package="soadev.model.domain">
+   <xsd:import namespace="commonj.sdo/java"/>
+   <xsd:complexType name="JobSDO">
+      <xsd:sequence>
+         <xsd:element name="jobId" type="xsd:string" minOccurs="0"/>
+         <xsd:element name="jobTitle" type="xsd:string" minOccurs="0"/>
+         <xsd:element name="maxSalary" type="xsd:double" minOccurs="0"/>
+         <xsd:element name="minSalary" type="xsd:double" minOccurs="0"/>
+      </xsd:sequence>
+   </xsd:complexType>
+   <xsd:element name="jobSDO" type="JobSDO"/>
+</xsd:schema>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            targetNamespace="http://app.soadev.com/model/domain"
+            xmlns="http://app.soadev.com/model/domain" xmlns:sdoJava="commonj.sdo/java"
+            sdoJava:package="soadev.model.domain">
+   <xsd:import namespace="commonj.sdo/java"/>
+   <xsd:include schemaLocation="JobSDO.xsd"/>
+   <xsd:complexType name="RequestSDO">
+      <xsd:sequence>
+         <xsd:element name="job" type="JobSDO" minOccurs="0"/>
+      </xsd:sequence>
+   </xsd:complexType>
+   <xsd:element name="requestSDO" type="RequestSDO"/>
+</xsd:schema>
