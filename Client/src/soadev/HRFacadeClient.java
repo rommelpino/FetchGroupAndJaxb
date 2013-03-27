@@ -42,13 +42,14 @@ public class HRFacadeClient {
             FetchGroup group = new FetchGroup();
             group.addAttribute("jobTitle");
             group.addAttribute("jobId");
-            group.addAttribute("maxSalary");
+//            group.addAttribute("maxSalary");
             List<Object[]> hints = new ArrayList<Object[]>();
             hints.add(new Object[]{QueryHints.FETCH_GROUP, group});
             hints.add(new Object[]{QueryHints.READ_ONLY, HintValues.TRUE});
+//            hints.add(new Object[]{QueryHints.LEFT_FETCH, });
             List<Job> jobList = (List<Job>)service.queryByRange(jpql, hints, 0, 0);
             for(Job job: jobList){
-//                System.out.println(job.getJobId() + ": " + job.getJobTitle() + ": " + job.getMaxSalary());
+//                System.out.println(job.getJobId() + ": " + job.getJobTitle() + ": " + job.getMinSalary());
 //                testMarshallPojoToSdo(job);
                 Request request = new Request();
                 request.setJob(job);
