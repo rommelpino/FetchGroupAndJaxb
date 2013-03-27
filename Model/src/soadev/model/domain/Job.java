@@ -22,7 +22,7 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "JobSDO", namespace = "http://app.soadev.com/model/domain")
 @XmlRootElement(name="jobSDO")
 @XmlAccessorType(XmlAccessType.FIELD)
-public class Job implements Serializable {
+public class Job extends EntityModel implements Serializable {
     @Id
     @Column(name="JOB_ID", nullable = false, length = 10)
     private String jobId;
@@ -30,8 +30,8 @@ public class Job implements Serializable {
     private String jobTitle;
     @Column(name="MAX_SALARY")
     private Long maxSalary;
-    @Column(name="MIN_SALARY")
-    private Long minSalary;
+//    @Column(name="MIN_SALARY")
+//    private Long minSalary;
 
     public Job() {
     }
@@ -40,7 +40,7 @@ public class Job implements Serializable {
         this.jobId = jobId;
         this.jobTitle = jobTitle;
         this.maxSalary = maxSalary;
-        this.minSalary = minSalary;
+//        this.minSalary = minSalary;
     }
 
     public String getJobId() {
@@ -67,11 +67,11 @@ public class Job implements Serializable {
         this.maxSalary = maxSalary;
     }
 
-    public Long getMinSalary() {
-        return minSalary;
-    }
-
-    public void setMinSalary(Long minSalary) {
-        this.minSalary = minSalary;
-    }
+//    public Long getMinSalary() {
+//        return minSalary;
+//    }
+//
+//    public void setMinSalary(Long minSalary) {
+//        this.minSalary = minSalary;
+//    }
 }
